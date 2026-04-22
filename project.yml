@@ -1,0 +1,41 @@
+name: MyQLock
+options:
+  bundleIdPrefix: com.myq
+  deploymentTarget:
+    iOS: "16.0"
+  createIntermediateGroups: true
+settings:
+  base:
+    SWIFT_VERSION: "5.9"
+    IPHONEOS_DEPLOYMENT_TARGET: "16.0"
+    TARGETED_DEVICE_FAMILY: "1"
+    ENABLE_PREVIEWS: YES
+    DEVELOPMENT_TEAM: ""
+targets:
+  MyQLock:
+    type: application
+    platform: iOS
+    sources:
+      - path: MyQLock
+    resources:
+      - path: MyQLock/Resources/Assets.xcassets
+    info:
+      path: MyQLock/Resources/Info.plist
+      properties:
+        CFBundleDisplayName: myQ Lock
+        UILaunchScreen:
+          UIColorName: ""
+        UIApplicationSceneManifest:
+          UIApplicationSupportsMultipleScenes: false
+        NSBluetoothAlwaysUsageDescription: We use Bluetooth to verify your myQ Smart Lock securely during setup.
+        NSCameraUsageDescription: The camera is used to scan the QR code on your myQ Smart Lock.
+        NSLocationWhenInUseUsageDescription: Your location helps Auto-Unlock your door as you arrive.
+        NSLocationAlwaysAndWhenInUseUsageDescription: Auto-Unlock needs location access to unlock your door when you get home, even when the app is in the background.
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.myq.smartlock
+        CODE_SIGN_STYLE: Automatic
+        CODE_SIGNING_REQUIRED: NO
+        CODE_SIGNING_ALLOWED: NO
+        GENERATE_INFOPLIST_FILE: NO
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon

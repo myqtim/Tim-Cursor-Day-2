@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>CFBundleDevelopmentRegion</key>
+    <string>en</string>
+    <key>CFBundleDisplayName</key>
+    <string>myQ Lock</string>
+    <key>CFBundleExecutable</key>
+    <string>$(EXECUTABLE_NAME)</string>
+    <key>CFBundleIdentifier</key>
+    <string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+    <key>CFBundleInfoDictionaryVersion</key>
+    <string>6.0</string>
+    <key>CFBundleName</key>
+    <string>$(PRODUCT_NAME)</string>
+    <key>CFBundlePackageType</key>
+    <string>APPL</string>
+    <key>CFBundleShortVersionString</key>
+    <string>1.0.0</string>
+    <key>CFBundleVersion</key>
+    <string>1</string>
+    <key>LSRequiresIPhoneOS</key>
+    <true/>
+    <key>UILaunchScreen</key>
+    <dict/>
+    <key>UISupportedInterfaceOrientations</key>
+    <array>
+        <string>UIInterfaceOrientationPortrait</string>
+    </array>
+    <key>NSBluetoothAlwaysUsageDescription</key>
+    <string>We use Bluetooth to verify your myQ Smart Lock securely during setup.</string>
+    <key>NSCameraUsageDescription</key>
+    <string>The camera is used to scan the QR code on your myQ Smart Lock.</string>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>Your location helps Auto-Unlock your door as you arrive.</string>
+    <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+    <string>Auto-Unlock needs location access to unlock your door when you get home, even when the app is in the background.</string>
+    <key>NSFaceIDUsageDescription</key>
+    <string>Face ID confirms it is you before unlocking the door.</string>
+</dict>
+</plist>
