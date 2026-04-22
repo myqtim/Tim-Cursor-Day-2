@@ -16,6 +16,7 @@ import { AutoUnlockSetup } from "./onboarding/AutoUnlockSetup";
 import { Success } from "./onboarding/Success";
 import { FindCodeHelpSheet, TroubleshootingSheet } from "./onboarding/Sheets";
 import { LockControls } from "./lockControls/LockControls";
+import { PhoneFrame } from "./components/PhoneFrame";
 
 export default function App() {
   return (
@@ -29,10 +30,14 @@ export default function App() {
 
 function Shell() {
   const { route } = useAppState();
+  const { step } = useOnboarding();
+
+  const statusBarStyle: "light" | "dark" =
+    route === "onboarding" && step === "cameraScan" ? "light" : "dark";
 
   return (
-    <div className="min-h-screen flex items-stretch justify-center bg-gradient-to-b from-[#EEF3FA] to-[#E8ECF3]">
-      <div className="w-full max-w-[480px] min-h-screen bg-surface-alt shadow-card relative overflow-hidden">
+    <PhoneFrame statusBarStyle={statusBarStyle}>
+      <div className="relative flex-1 w-full bg-surface-alt overflow-hidden">
         <AnimatePresence mode="wait" initial={false}>
           {route === "onboarding" ? (
             <motion.div
@@ -59,7 +64,7 @@ function Shell() {
           )}
         </AnimatePresence>
       </div>
-    </div>
+    </PhoneFrame>
   );
 }
 

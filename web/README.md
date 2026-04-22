@@ -1,6 +1,6 @@
-# myQ Smart Lock — Web (Vite + React + Tailwind)
+# myQ Smart Lock — Web Prototype (Vite + React + Tailwind)
 
-Browser port of the iPhone onboarding flow. Mobile-first; looks best at iPhone widths but is responsive.
+Interactive browser prototype of the iPhone onboarding flow. On desktop it renders inside a simulated iPhone frame (Dynamic Island, status bar with live time, home indicator, side buttons). On real phones it collapses to full-screen so it feels native.
 
 ## Setup
 

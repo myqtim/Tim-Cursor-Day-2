@@ -28,11 +28,11 @@
 
 @layer components {
   .screen {
-    @apply flex flex-col min-h-full w-full max-w-[480px] mx-auto bg-surface-alt;
+    @apply flex flex-col h-full w-full bg-surface-alt;
   }
 
   .screen-scroll {
-    @apply flex-1 overflow-y-auto px-6 pb-6;
+    @apply flex-1 overflow-y-auto px-6 pb-6 min-h-0;
   }
 
   .card {
