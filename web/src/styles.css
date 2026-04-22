@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+
+  body {
+    @apply bg-surface-alt text-ink antialiased;
+    font-family:
+      -apple-system,
+      system-ui,
+      "Segoe UI",
+      Roboto,
+      sans-serif;
+  }
+
+  :focus-visible {
+    outline: 2px solid #1f6feb;
+    outline-offset: 2px;
+    border-radius: 8px;
+  }
+}
+
+@layer components {
+  .screen {
+    @apply flex flex-col min-h-full w-full max-w-[480px] mx-auto bg-surface-alt;
+  }
+
+  .screen-scroll {
+    @apply flex-1 overflow-y-auto px-6 pb-6;
+  }
+
+  .card {
+    @apply rounded-xl bg-surface border border-line p-4;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 h-[52px] w-full rounded-xl bg-brand text-white font-semibold text-[17px] transition active:scale-[0.99];
+  }
+
+  .btn-primary[disabled] {
+    @apply opacity-50 active:scale-100 cursor-not-allowed;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 h-[52px] w-full rounded-xl bg-brand-tint text-brand font-semibold text-[17px] transition active:scale-[0.99];
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-1 h-11 text-brand font-semibold text-[15px];
+  }
+
+  .label-cap {
+    @apply text-[13px] font-semibold uppercase tracking-wide text-ink-muted;
+  }
+}
